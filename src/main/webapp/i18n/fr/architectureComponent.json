@@ -1,0 +1,28 @@
+{
+  "flowManagerApp": {
+    "architectureComponent": {
+      "home": {
+        "title": "ArchitectureComponents",
+        "createLabel": "Créer un nouveau Architecture Component",
+        "createOrEditLabel": "Créer ou éditer un Architecture Component",
+        "notFound": "Aucun Architecture Component trouvé"
+      },
+      "created": "Un nouveau Architecture Component a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Architecture Component avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Architecture Component avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Architecture Component {{ id }} ?"
+      },
+      "detail": {
+        "title": "Architecture Component"
+      },
+      "name": "Name",
+      "componentDetails": "Component Details",
+      "componentCategory": "Component Category",
+      "components": "Components",
+      "componentFrom": "Component From",
+      "componentTo": "Component To",
+      "component": "Component"
+    }
+  }
+}

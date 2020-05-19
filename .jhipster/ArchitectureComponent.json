@@ -1,0 +1,58 @@
+{
+  "name": "ArchitectureComponent",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "componentDetails",
+      "otherEntityRelationshipName": "detailsByEnvironement",
+      "relationshipName": "componentDetails"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "componentCategory",
+      "otherEntityRelationshipName": "category"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "components",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "flow",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "componentFrom"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "flow",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "componentTo"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "componentDetails",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "component"
+    }
+  ],
+  "changelogDate": "20200519211740",
+  "entityTableName": "architecture_component",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="componentDetails">
+            <h2><span jhiTranslate="flowManagerApp.componentDetails.detail.title">Component Details</span> {{ componentDetails.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.server">Server</span></dt>
+                <dd>
+                    <span>{{ componentDetails.server }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.port">Port</span></dt>
+                <dd>
+                    <span>{{ componentDetails.port }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.url">Url</span></dt>
+                <dd>
+                    <span>{{ componentDetails.url }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.environment">Environment</span></dt>
+                <dd>
+                    <div *ngIf="componentDetails.environmentId">
+                        <a [routerLink]="['/environment', componentDetails.environmentId, 'view']">{{ componentDetails.environmentId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.architectureComponent">Architecture Component</span></dt>
+                <dd>
+                    <div *ngIf="componentDetails.architectureComponentId">
+                        <a [routerLink]="['/architecture-component', componentDetails.architectureComponentId, 'view']">{{ componentDetails.architectureComponentId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.detailsByEnvironement">Details By Environement</span></dt>
+                <dd>
+                    <div *ngIf="componentDetails.detailsByEnvironementId">
+                        <a [routerLink]="['/architecture-component', componentDetails.detailsByEnvironementId, 'view']">{{ componentDetails.detailsByEnvironementId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentDetails.componentDetails">Component Details</span></dt>
+                <dd>
+                    <div *ngIf="componentDetails.componentDetailsId">
+                        <a [routerLink]="['/environment', componentDetails.componentDetailsId, 'view']">{{ componentDetails.componentDetailsId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/component-details', componentDetails.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

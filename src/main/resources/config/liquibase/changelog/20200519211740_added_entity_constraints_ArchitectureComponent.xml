@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity ArchitectureComponent.
+    -->
+    <changeSet id="20200519211740-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="component_category_id"
+                                 baseTableName="architecture_component"
+                                 constraintName="fk_architecture_component_component_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="component_category"/>
+
+        <addForeignKeyConstraint baseColumnNames="components_id"
+                                 baseTableName="architecture_component"
+                                 constraintName="fk_architecture_component_components_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+    </changeSet>
+</databaseChangeLog>

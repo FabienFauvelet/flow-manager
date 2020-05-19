@@ -47,6 +47,21 @@ public class CacheConfiguration {
             createCache(cm, com.mycompany.myapp.domain.User.class.getName());
             createCache(cm, com.mycompany.myapp.domain.Authority.class.getName());
             createCache(cm, com.mycompany.myapp.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.mycompany.myapp.domain.Project.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Project.class.getName() + ".architectureComponents");
+            createCache(cm, com.mycompany.myapp.domain.Project.class.getName() + ".flows");
+            createCache(cm, com.mycompany.myapp.domain.ArchitectureComponent.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ArchitectureComponent.class.getName() + ".componentDetails");
+            createCache(cm, com.mycompany.myapp.domain.ArchitectureComponent.class.getName() + ".componentFroms");
+            createCache(cm, com.mycompany.myapp.domain.ArchitectureComponent.class.getName() + ".componentTos");
+            createCache(cm, com.mycompany.myapp.domain.ArchitectureComponent.class.getName() + ".components");
+            createCache(cm, com.mycompany.myapp.domain.ComponentCategory.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ComponentCategory.class.getName() + ".categories");
+            createCache(cm, com.mycompany.myapp.domain.Flow.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.ComponentDetails.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Environment.class.getName());
+            createCache(cm, com.mycompany.myapp.domain.Environment.class.getName() + ".componentDetails");
+            createCache(cm, com.mycompany.myapp.domain.Environment.class.getName() + ".environments");
             // jhipster-needle-ehcache-add-entry
         };
     }

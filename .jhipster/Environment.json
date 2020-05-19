@@ -1,0 +1,42 @@
+{
+  "name": "Environment",
+  "fields": [
+    {
+      "fieldName": "shortLabel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "label",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longLabel",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "componentDetails",
+      "otherEntityRelationshipName": "componentDetails",
+      "relationshipName": "componentDetails"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "componentDetails",
+      "otherEntityRelationshipName": "environment",
+      "relationshipName": "environment"
+    }
+  ],
+  "changelogDate": "20200519212140",
+  "entityTableName": "environment",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
