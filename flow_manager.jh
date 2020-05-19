@@ -1,0 +1,40 @@
+entity Component {
+	id Long,
+	category Labels,
+	name String,
+    server String,
+    port String,
+    url String,
+    env Labels
+}
+
+entity Labels {
+	shortLabel String,
+    label String,
+    longLabel String
+    type LabelType
+}
+
+entity Flux {
+	componentFrom Component,
+    componentTo Component
+}
+relationship ManyToOne {
+	Flux to Component{componentFrom},
+	Flux to Component{componentTo}
+}
+enum LabelType {
+    COMPONENT_CATEGORY, ENV_TYPE
+}
+
+// Set pagination options
+paginate JobHistory, Employee with infinite-scroll
+paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
