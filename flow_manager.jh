@@ -1,0 +1,67 @@
+entity Project{
+	id Long,
+    name String
+}
+entity ArchitectureComponent {
+	id Long,
+	name String
+}
+entity ComponentCategory{
+	id Long,
+	shortLabel String,
+	label String,
+	longLabel String
+}
+entity Flow {
+	id Long,
+    description String,
+    status Boolean
+    
+}
+entity ComponentDetails {
+	id Long,
+	server String,
+    port String,
+    url String
+}
+entity ComponentCategory {
+	id Long,
+	shortLabel String,
+	label String,
+	longLabel String
+}
+entity Environment {
+	id Long,
+	shortLabel String,
+	label String,
+	longLabel String
+}
+//relationship ManyToMany {
+//	ArchitectureComponent{} to Environment{}
+//}
+relationship OneToMany {
+	Project{components} to ArchitectureComponent
+    Project{flows} to Flow
+    ArchitectureComponent{detailsByEnvironement} to ComponentDetails
+    Environment{componentDetails} to ComponentDetails
+}
+relationship ManyToOne {
+	ArchitectureComponent{category} to ComponentCategory
+	Flow{componentFrom} to ArchitectureComponent,
+	Flow{componentTo} to ArchitectureComponent
+    ComponentDetails{environment} to Environment
+    ComponentDetails{component} to ArchitectureComponent
+}
+
+
+// Set pagination options
+//paginate JobHistory, Employee with infinite-scroll
+//paginate Job with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
