@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="flow">
+            <h2><span jhiTranslate="flowManagerApp.flow.detail.title">Flow</span> {{ flow.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="flowManagerApp.flow.description">Description</span></dt>
+                <dd>
+                    <span>{{ flow.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.flow.status">Status</span></dt>
+                <dd>
+                    <span>{{ flow.status }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.flow.architectureComponent">Architecture Component</span></dt>
+                <dd>
+                    <div *ngIf="flow.architectureComponentId">
+                        <a [routerLink]="['/architecture-component', flow.architectureComponentId, 'view']">{{ flow.architectureComponentId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.flow.architectureComponent">Architecture Component</span></dt>
+                <dd>
+                    <div *ngIf="flow.architectureComponentId">
+                        <a [routerLink]="['/architecture-component', flow.architectureComponentId, 'view']">{{ flow.architectureComponentId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.flow.flows">Flows</span></dt>
+                <dd>
+                    <div *ngIf="flow.flowsId">
+                        <a [routerLink]="['/project', flow.flowsId, 'view']">{{ flow.flowsId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/flow', flow.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

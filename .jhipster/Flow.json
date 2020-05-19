@@ -1,0 +1,43 @@
+{
+  "name": "Flow",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "architectureComponent",
+      "otherEntityRelationshipName": "componentFrom"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "architectureComponent",
+      "otherEntityRelationshipName": "componentTo"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "flow",
+      "relationshipName": "flows",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200519211940",
+  "entityTableName": "flow",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

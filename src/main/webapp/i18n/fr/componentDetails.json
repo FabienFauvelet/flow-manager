@@ -1,0 +1,28 @@
+{
+  "flowManagerApp": {
+    "componentDetails": {
+      "home": {
+        "title": "ComponentDetails",
+        "createLabel": "Créer un nouveau Component Details",
+        "createOrEditLabel": "Créer ou éditer un Component Details",
+        "notFound": "Aucun Component Details trouvé"
+      },
+      "created": "Un nouveau Component Details a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Component Details avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Component Details avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Component Details {{ id }} ?"
+      },
+      "detail": {
+        "title": "Component Details"
+      },
+      "server": "Server",
+      "port": "Port",
+      "url": "Url",
+      "environment": "Environment",
+      "architectureComponent": "Architecture Component",
+      "detailsByEnvironement": "Details By Environement",
+      "componentDetails": "Component Details"
+    }
+  }
+}

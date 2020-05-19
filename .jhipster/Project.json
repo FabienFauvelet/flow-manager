@@ -1,0 +1,34 @@
+{
+  "name": "Project",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "architectureComponent",
+      "otherEntityRelationshipName": "components",
+      "relationshipName": "architectureComponent"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "flow",
+      "otherEntityRelationshipName": "flows",
+      "relationshipName": "flow"
+    }
+  ],
+  "changelogDate": "20200519211640",
+  "entityTableName": "project",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
