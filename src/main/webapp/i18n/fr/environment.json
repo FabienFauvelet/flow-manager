@@ -1,0 +1,25 @@
+{
+  "flowManagerApp": {
+    "environment": {
+      "home": {
+        "title": "Environments",
+        "createLabel": "Créer un nouveau Environment",
+        "createOrEditLabel": "Créer ou éditer un Environment",
+        "notFound": "Aucun Environment trouvé"
+      },
+      "created": "Un nouveau Environment a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Environment avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Environment avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Environment {{ id }} ?"
+      },
+      "detail": {
+        "title": "Environment"
+      },
+      "shortLabel": "Short Label",
+      "label": "Label",
+      "longLabel": "Long Label",
+      "componentDetails": "Component Details"
+    }
+  }
+}

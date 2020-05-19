@@ -1,0 +1,24 @@
+{
+  "flowManagerApp": {
+    "componentCategory": {
+      "home": {
+        "title": "Component Categories",
+        "createLabel": "Create a new Component Category",
+        "createOrEditLabel": "Create or edit a Component Category",
+        "notFound": "No Component Categories found"
+      },
+      "created": "A new Component Category is created with identifier {{ param }}",
+      "updated": "A Component Category is updated with identifier {{ param }}",
+      "deleted": "A Component Category is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Component Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Component Category"
+      },
+      "shortLabel": "Short Label",
+      "label": "Label",
+      "longLabel": "Long Label"
+    }
+  }
+}

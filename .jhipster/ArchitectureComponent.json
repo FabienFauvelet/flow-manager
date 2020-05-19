@@ -1,0 +1,42 @@
+{
+  "name": "ArchitectureComponent",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "componentDetails",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "detailsByEnvironement"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "componentCategory",
+      "otherEntityRelationshipName": "architectureComponent",
+      "relationshipName": "category",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "project",
+      "otherEntityRelationshipName": "components",
+      "relationshipName": "project",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200519213240",
+  "entityTableName": "architecture_component",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

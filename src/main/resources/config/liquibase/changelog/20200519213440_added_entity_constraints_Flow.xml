@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Flow.
+    -->
+    <changeSet id="20200519213440-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="component_from_id"
+                                 baseTableName="flow"
+                                 constraintName="fk_flow_component_from_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="architecture_component"/>
+
+        <addForeignKeyConstraint baseColumnNames="component_to_id"
+                                 baseTableName="flow"
+                                 constraintName="fk_flow_component_to_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="architecture_component"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="flow"
+                                 constraintName="fk_flow_project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+    </changeSet>
+</databaseChangeLog>

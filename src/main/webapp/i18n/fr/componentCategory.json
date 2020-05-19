@@ -1,0 +1,24 @@
+{
+  "flowManagerApp": {
+    "componentCategory": {
+      "home": {
+        "title": "ComponentCategories",
+        "createLabel": "Créer un nouveau Component Category",
+        "createOrEditLabel": "Créer ou éditer un Component Category",
+        "notFound": "Aucun Component Category trouvé"
+      },
+      "created": "Un nouveau Component Category a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Component Category avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Component Category avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Component Category {{ id }} ?"
+      },
+      "detail": {
+        "title": "Component Category"
+      },
+      "shortLabel": "Short Label",
+      "label": "Label",
+      "longLabel": "Long Label"
+    }
+  }
+}
