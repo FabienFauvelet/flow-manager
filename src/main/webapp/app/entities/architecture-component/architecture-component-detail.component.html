@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="architectureComponent">
+            <h2><span jhiTranslate="flowManagerApp.architectureComponent.detail.title">Architecture Component</span> {{ architectureComponent.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="flowManagerApp.architectureComponent.name">Name</span></dt>
+                <dd>
+                    <span>{{ architectureComponent.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.architectureComponent.category">Category</span></dt>
+                <dd>
+                    <div *ngIf="architectureComponent.categoryId">
+                        <a [routerLink]="['/component-category', architectureComponent.categoryId, 'view']">{{ architectureComponent.categoryId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.architectureComponent.project">Project</span></dt>
+                <dd>
+                    <div *ngIf="architectureComponent.projectId">
+                        <a [routerLink]="['/project', architectureComponent.projectId, 'view']">{{ architectureComponent.projectId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/architecture-component', architectureComponent.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

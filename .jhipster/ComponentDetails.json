@@ -1,0 +1,58 @@
+{
+  "name": "ComponentDetails",
+  "fields": [
+    {
+      "fieldName": "server",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "port",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "componentDetails",
+      "relationshipName": "environment",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "architectureComponent",
+      "otherEntityRelationshipName": "componentDetails",
+      "relationshipName": "component",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "architectureComponent",
+      "otherEntityRelationshipName": "detailsByEnvironement",
+      "relationshipName": "architectureComponent",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "environment",
+      "otherEntityRelationshipName": "componentDetails",
+      "relationshipName": "environment",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200519213540",
+  "entityTableName": "component_details",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

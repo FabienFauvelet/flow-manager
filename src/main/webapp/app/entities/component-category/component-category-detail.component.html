@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="componentCategory">
+            <h2><span jhiTranslate="flowManagerApp.componentCategory.detail.title">Component Category</span> {{ componentCategory.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="flowManagerApp.componentCategory.shortLabel">Short Label</span></dt>
+                <dd>
+                    <span>{{ componentCategory.shortLabel }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentCategory.label">Label</span></dt>
+                <dd>
+                    <span>{{ componentCategory.label }}</span>
+                </dd>
+                <dt><span jhiTranslate="flowManagerApp.componentCategory.longLabel">Long Label</span></dt>
+                <dd>
+                    <span>{{ componentCategory.longLabel }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/component-category', componentCategory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
